@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repeating Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .alert {
+      padding: 15px;
+      background-color: #4CAF50; /* Green color */
+      color: #fff; /* White text */
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+
+<div class="alert" id="greenAlert">
+  This is a green alert!
+</div>
+
+<script>
+  // Show the green alert
+  function showGreenAlert() {
+    var alert = document.getElementById("greenAlert");
+    alert.style.display = "block";
+  }
+
+  // Hide the green alert
+  function hideGreenAlert() {
+    var alert = document.getElementById("greenAlert");
+    alert.style.display = "none";
+  }
+
+  // Show the green alert every 2 seconds
+  setInterval(function () {
+    showGreenAlert();
+    // Hide the green alert after 1 second
+    setTimeout(hideGreenAlert, 1000);
+  }, 2000);
+</script>
+
+</body>
+</html>
